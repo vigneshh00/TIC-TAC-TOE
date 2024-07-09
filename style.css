@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background:rgba(0, 0, 0, 0.89);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.container{
+    position: relative;
+    height: auto;
+    width: auto;
+    text-align: center;
+    background-color: #278adcab;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    box-shadow:0 0 10px #31424a;
+}
+
+/* START */
+.start{
+    display: block;
+    padding:10px;
+}
+.start h2{
+    border-bottom:2px solid #ffffff;
+    color:#ffffff;
+    pointer-events: none;
+    font-size:50px;
+    margin-bottom: 10px;
+}
+.start button{
+    position: relative;
+    cursor: pointer;
+    margin: 30px;
+    border: transparent;
+    background-color: rgba(255, 255, 255, 0.007);
+    color:#ffffff;
+    letter-spacing: 0.08cm;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    font-size: 25px;
+    transition: all 0.3s;
+}
+.start button svg,button svg rect{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    fill:transparent;
+}
+.start button svg rect{
+    stroke-width: 3;
+    stroke: #ffffff;
+    stroke-dasharray: 100;
+    animation: animate 4s linear infinite;
+}
+.start button svg rect:hover{
+    stroke-width: 0;
+}
+@keyframes animate {
+    0%{
+        stroke-dashoffset: 400;
+    }
+    100%{
+        stroke-dashoffset: 00;
+    }
+}
+.start button:hover{
+    background: #ffffff;
+    box-shadow: 0 0 10px #ffffff,0 0 20px #ffffff,0 0 30px #ffffff;
+    color:#67b4fb;
+}
+/* CHOOSE */
+.choose{
+    display:none;
+}
+.choose h2{
+    font-size:30px;
+    margin-bottom:20px;
+    color: #fff;
+}
+.choose button{
+    color:#fff;
+    font-weight:550;
+    cursor:pointer;
+    background-color:transparent;
+    border:2px solid white;
+    border-radius:20px;
+    font-size:15px;;
+    padding:10px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+.choose button:hover{
+    background: #ffffff;
+    box-shadow: 0 0 8px #ffffff,0 0 18px #ffffff,0 0 28px #ffffff;
+    color:#2575c0;
+    transform:scale(1.1);
+}
+/* GAME */
+.game{
+    display:none;
+    height:420px;
+    width:350px;
+    position: relative;
+}
+.game h2{
+    border-bottom:2px solid #ffffff;
+    color:#ffffff;
+    pointer-events: none;
+    font-size:50px;
+    margin-bottom: 30px;
+}
+.game .turn{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.game .turn button{
+    font-size:15px;
+    height: 40px;
+    width: 130px;
+    border:2px solid white;
+    color:#ffffff;
+    font-weight:550;
+    background-color: transparent;
+    border-radius: 50px;
+    position: relative;
+    z-index:2;
+}
+.game .turn #show{
+    position:absolute;
+    top:0;
+    left:22.4px;
+    height:40px;
+    width:130px;
+    border-radius: 50px;
+    background-color:rgba(0, 225, 255, 0.61);
+    box-shadow: 0 0 10px #00e1ff9c,0 0 10px #00e1ff9c,0 0 10px #00e1ff9c;
+    z-index:1;
+    transition:all 0.3s;
+}
+.game .box{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.game .box .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80px;
+    margin: 7px;
+    background-color: #ffffff;
+    transition: all 0.2s;
+}
+.game .box .btn:hover{
+    background-color:rgba(138, 204, 243, 0.747);
+}  
+.game .box #plyx{
+    font-size:40px;
+    color:#425dd3;
+}
+.game .box #plyo{
+    font-size:40px;
+    color:#d45d32;
+}
+/* WINNER */
+.winner{
+    display:none;
+}
+.winner h2{
+    border-bottom:2px solid #ffffff;
+    color:#ffffff;
+    pointer-events: none;
+    font-size:30px;
+    margin-bottom: 30px;
+}
+.winner button{
+    color:#2575c0;
+    font-weight:550;
+    cursor:pointer;
+    background-color:white;
+    border:2px solid white;
+    border-radius:20px;
+    width: 150px;
+    font-size:20px;;
+    padding:10px;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+.winner button:hover{
+    background: #ffffff;
+    box-shadow: 0 0 8px #ffffff,0 0 18px #ffffff,0 0 28px #ffffff;
+    color:#2575c0;
+    transform:scale(1.1);
+}

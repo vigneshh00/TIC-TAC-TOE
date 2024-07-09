@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/06f7708eb9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+	<div class="container">
+		<div class="start" id="start">
+			<h2>Tic-Tac-Toe</h2>
+			<button id="strt"><svg><rect></rect></svg><b>START</b></button>
+		</div>
+
+		<div class="choose" id="choose">
+			<h2>Which one you should be?</h2>
+			<button id="play-x">PLAYER (X)</button>
+			<button id="play-o">PLAYER (O)</button>
+		</div>
+
+		<div class="game" id="game">
+			<h2>Tic-Tac-Toe</h2>
+
+			<div class="turn">
+				<button id="x-turn">Player X</button>
+				<button id="o-turn">Player O</button>
+				<div id="show"></div> 
+			</div>
+
+			<div class="box" id="box">
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+				<div class="btn"></div>
+			</div>
+		</div>
+
+		<div class="winner" id="winner">
+			<h2 id="display">Player X wins the game!</h2>
+			<button id="playagain">Play again</button>
+			<button id="quit">Quit</button>
+		</div>
+	</div>
+<script src="script.js" defer></script>
+</body>
+</html>
